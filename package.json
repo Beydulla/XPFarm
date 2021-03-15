@@ -8,10 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest",
-    "recipe": "node -e 'require(\"./recipe.js\").recipe()'",
-    "init": "node --experimental-modules recipe.js",
-    "myScript": "node -e 'require(\"./recipe\").someFunction()'"
+    "test": "jest"
   
   }
 }
