@@ -7,7 +7,7 @@ const  subtractDamage = (fighter1, fighter2) => {
 }
 
 const lost = (fighter) => {
-    if(fighter.health === 0){
+    if(fighter.health <= 0){
         return true;
     }
 }
