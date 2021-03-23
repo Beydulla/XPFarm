@@ -1,7 +1,11 @@
 class Fighter {
-    constructor(name) {
+    constructor(name, health, damage) {
+        if(name === ''){
+            throw "empty name"
+        }
         this.name = name;
-
+        this.health = health;
+        this.damage = damage;
     }
 
 }
