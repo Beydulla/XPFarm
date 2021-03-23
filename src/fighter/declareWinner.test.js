@@ -1,6 +1,6 @@
 const { describe, test, expect } = require('@jest/globals');
 const { Fighter } = require("./Fighter")
-const { declareWinner, subtractDamage } = require("./declareWinner")
+const { declareWinner, subtractDamage, lost } = require("./declareWinner")
 
 describe('Tests for declaring winner', () => {
     describe('Tests for subtracting damage from health ', () => {
@@ -11,4 +11,11 @@ describe('Tests for declaring winner', () => {
             expect(fighter1.health).toEqual(90);
         });
     });
+    describe('Tests for checking if fighter lost ', () => {
+        test("Expect true when fighter health is 0", () => {
+            const fighter1 = new Fighter("Lew", 0, 15);
+            expect(lost(fighter1)).toEqual(true);
+        });
+    });
+
 });
