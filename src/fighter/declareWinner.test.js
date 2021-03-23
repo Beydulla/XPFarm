@@ -32,6 +32,11 @@ describe('Tests for declaring winner', () => {
             const fighter2 = new Fighter("Harry", 30, 10);
             expect(declareWinner(fighter1, fighter2, "Lew")).toEqual("Lew");
         });
+        test("Expect Harry to be winner ", () => {
+            const fighter1 = new Fighter("Lew", 20, 15);
+            const fighter2 = new Fighter("Harry", 100, 10);
+            expect(declareWinner(fighter1, fighter2, "Lew")).toEqual("Harry");
+        });
 
     });
 

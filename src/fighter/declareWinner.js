@@ -1,16 +1,25 @@
 const declareWinner = (fighter1, fighter2, firstAttacker) => {
 
+    let currentAttacker = fighter2;
+    let currentDefender = fighter1;
     if(fighter1.name === firstAttacker){
-        subtractDamage(fighter2, fighter1);
-        if(lost(fighter2)){
-            return fighter1.name;
+        currentAttacker = fighter1;
+        currentDefender = fighter2;
+    }
+    while(1){
+        subtractDamage(currentDefender, currentAttacker);
+        if(lost(currentDefender)){
+            return currentAttacker.name;
         }
+        const temp = currentDefender;
+        currentDefender = currentAttacker;
+        currentAttacker = temp;
+
     }
 
 }
-
-const  subtractDamage = (fighter1, fighter2) => {
-    fighter1.health = fighter1.health - fighter2.damage;
+const subtractDamage = (fighter1, fighter2) => {
+    fighter1.health = fighter1.health - fighter2.damagePerAttack ;
 }
 
 const lost = (fighter) => {

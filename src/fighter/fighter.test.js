@@ -13,7 +13,7 @@ describe('Tests for fighter kata', () => {
         });
         test("Expect fighter to have damage", () => {
             const fighter = new Fighter("Lew", 2, 3);
-            expect(fighter.damage).toEqual(3);
+            expect(fighter.damagePerAttack ).toEqual(3);
         });
         test("Expect empty name when you pass empty string for the fighter", () => {
             expect(() => new Fighter( '',2, 3)).toThrow("empty name");
@@ -24,7 +24,7 @@ describe('Tests for fighter kata', () => {
         });
         test("Expect damage 10 when you dont pass damage", () => {
             const fighter = new Fighter("Lew" , 100)
-            expect(fighter.damage).toEqual(10);
+            expect(fighter.damagePerAttack ).toEqual(10);
         });
 
     });

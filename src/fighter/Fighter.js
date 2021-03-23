@@ -1,17 +1,17 @@
 class Fighter {
-    constructor(name, health, damage) {
+    constructor(name, health, damagePerAttack ) {
         if(name === ''){
             throw "empty name"
         }
         if(health === undefined){
             health = 100;
         }
-        if(damage === undefined){
-            damage = 10;
+        if(damagePerAttack  === undefined){
+            damagePerAttack  = 10;
         }
         this.name = name;
         this.health = health;
-        this.damage = damage;
+        this.damagePerAttack  = damagePerAttack ;
     }
 
 }
