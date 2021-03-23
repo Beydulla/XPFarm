@@ -1,4 +1,11 @@
-const declareWinner = () => {
+const declareWinner = (fighter1, fighter2, firstAttacker) => {
+
+    if(fighter1.name === firstAttacker){
+        subtractDamage(fighter2, fighter1);
+        if(lost(fighter2)){
+            return fighter1.name;
+        }
+    }
 
 }
 
