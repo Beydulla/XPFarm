@@ -11,5 +11,9 @@ describe('Tests for fighter kata', () => {
             const fighter = new Fighter("Lew", 2, 3);
             expect(fighter.health).toEqual(2);
         });
+        test("Expect fighter to have damage", () => {
+            const fighter = new Fighter("Lew", 2, 3);
+            expect(fighter.damage).toEqual(3);
+        });
     });
 });
