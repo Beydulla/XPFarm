@@ -22,9 +22,14 @@ describe('Tests for declaring winner', () => {
         });
     });
     describe('Tests declaring winner ', () => {
-        test("Expect Lew to be winner when attacks first ", () => {
+        test("Expect Lew to be winner when attacks first time ", () => {
             const fighter1 = new Fighter("Lew", 20, 15);
             const fighter2 = new Fighter("Harry", 10, 10);
+            expect(declareWinner(fighter1, fighter2, "Lew")).toEqual("Lew");
+        });
+        test("Expect Lew to be winner when in second round ", () => {
+            const fighter1 = new Fighter("Lew", 20, 15);
+            const fighter2 = new Fighter("Harry", 30, 10);
             expect(declareWinner(fighter1, fighter2, "Lew")).toEqual("Lew");
         });
 
