@@ -16,6 +16,10 @@ describe('Tests for declaring winner', () => {
             const fighter1 = new Fighter("Lew", 0, 15);
             expect(lost(fighter1)).toEqual(true);
         });
+        test("Expect true when fighter health is less than 0", () => {
+            const fighter1 = new Fighter("Lew", -10, 15);
+            expect(lost(fighter1)).toEqual(true);
+        });
     });
 
 });
