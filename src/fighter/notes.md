@@ -1,0 +1,2 @@
+- if health is less than 0 make it 100
+- if damage is less than 0 make it 10
