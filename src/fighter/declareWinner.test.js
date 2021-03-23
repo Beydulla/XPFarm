@@ -21,5 +21,13 @@ describe('Tests for declaring winner', () => {
             expect(lost(fighter1)).toEqual(true);
         });
     });
+    describe('Tests declaring winner ', () => {
+        test("Expect Lew to be winner when attacks first ", () => {
+            const fighter1 = new Fighter("Lew", 20, 15);
+            const fighter2 = new Fighter("Harry", 10, 10);
+            expect(declareWinner(fighter1, fighter2, "Lew")).toEqual("Lew");
+        });
+
+    });
 
 });
