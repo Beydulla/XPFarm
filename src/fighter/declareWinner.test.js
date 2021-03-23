@@ -1,6 +1,6 @@
 const { describe, test, expect } = require('@jest/globals');
 const { Fighter } = require("./Fighter")
-const { declareWinner } = require("./declareWinner")
+const { declareWinner, subtractDamage } = require("./declareWinner")
 
 describe('Tests for declaring winner', () => {
     describe('Tests for subtracting damage from health ', () => {
