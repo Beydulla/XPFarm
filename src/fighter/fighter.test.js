@@ -15,9 +15,13 @@ describe('Tests for fighter kata', () => {
             const fighter = new Fighter("Lew", 2, 3);
             expect(fighter.damage).toEqual(3);
         });
-
         test("Expect empty name when you pass empty string for the fighter", () => {
             expect(() => new Fighter( '',2, 3)).toThrow("empty name");
         });
+        test("Expect 100 health when you dont pass health", () => {
+            const fighter = new Fighter("Lew" )
+            expect(fighter.health).toEqual(100);
+        });
+
     });
 });
